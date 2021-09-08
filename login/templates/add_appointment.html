@@ -17,7 +17,7 @@
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Task</label>
                             </div>
                             <div class="col-sm-10">
-                                <input type="text" readonly class="form-control-plaintext" id="" placeholder="Task">
+                                <input type="text" name="task" size="20" placeholder="Task">
                             </div>
                             <div class="col-sm-2">
                                 <label for="staticEmail" class="col-sm-2 col-form-label">Date</label>
@@ -30,9 +30,13 @@
                             </div>
                             <div class="col-sm-10">
                                 <select name="combo">
-                                    <option value="1">Missed</option>
-                                    <option value="2" selected>Done</option>
+                                    <option value="Missed">Missed</option>
+                                    <option value="Done" selected>Done</option>
+                                    <option value="Pending" selected>Pending</option>
                                 </select>
+                            </div>
+                            <div class="container text-right" >
+                                <buttona class="btn btn-primary btn-sm">Add</button>
                             </div>
                         </div>
                     </div>

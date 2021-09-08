@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/andrea/apps/discord/preprueba/EvaluacionModoPrueba/env"
+set -gx VIRTUAL_ENV "/home/andrea/apps/discord/proyecto_grupal/EvaluacionModoPrueba/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
