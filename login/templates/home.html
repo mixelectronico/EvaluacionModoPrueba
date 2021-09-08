@@ -13,12 +13,47 @@
     <div class="wrapper">
     {% include "navbar.html" %}
         <div class="header">
-            <h5>Hola, {{active_user.nombre}} {{active_user.apellido}}</h5>
+            <h5>Nombre: {{active_user.nombre}} {{active_user.apellido}}</h5>
             <br>
         </div>
         <br>
         <div class="content">
-            
+            <h6>Here are your appointments</h6>
+            <a href="">Add new appointment</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <h6>Past appointments</h6>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
