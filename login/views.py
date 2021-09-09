@@ -1,15 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from time import gmtime, strftime
-import bcrypt
+#import bcrypt
 
 from .models import User
 
 # Create your views here.
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'index.html')
+
 def registrar(request):
-    return render(request, 'registro.html')
+    return render(request, 'index.html')
 
 def inicio(request):
     usuario = User.objects.filter(email=request.POST['email'])
