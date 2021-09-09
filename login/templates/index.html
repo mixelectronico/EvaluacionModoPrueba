@@ -23,12 +23,15 @@
                         <div class="card-header bg-dark text-white">Create User</div>
                         <div class="card-body">
                             {% if messages %}
-                            <ul>
-                                {% for message in messages %}
-                                <li>{{message}}</li>
-                                {% endfor %}
-                            </ul>
-                            {% endif %}
+                            {% for message in messages %}
+                                <div class="container-fluid p-0">
+                                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                                        {{message}}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
                             <form class="form" action="registro" method="POST">
                                 {% csrf_token %}
                                 <input hidden name="rol" id="rol" value="1">

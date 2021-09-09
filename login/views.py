@@ -4,6 +4,7 @@ from time import gmtime, strftime
 #import bcrypt
 
 from .models import User
+from home.models import Appointment
 
 # Create your views here.
 def login(request):
@@ -60,3 +61,14 @@ def registro(request):
 def logout(request):
     request.session.flush()
     return redirect('/')
+
+def create_appointment(request):
+    return render(request, 'add_appointment.html')
+
+def add_appointment(request):
+    task = request.POST['task']
+    date = request.POST['date']
+    status = request.POST['status']
+    user = User.objects.filter(id=request.session['user_id'])
+    Appointment.objects.create(task=task, date=date, status=status, user=user[0])
+    return redirect('home/')
