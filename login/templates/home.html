@@ -20,7 +20,7 @@
         <div class="content">
             <h6>Here are your appointments</h6>
             <a href="{% url 'create_appointment' %}">Add new appointment</a>
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Task</th>
@@ -30,17 +30,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for appointment in non_missed_appointments %}
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ appointment.task }}</td>
+                        <td>{{ appointment.date }}</td>
+                        <td>{{ appointment.status }}</td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
         <div class="footer">
             <h6>Past appointments</h6>
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Task</th>
@@ -48,10 +50,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for appointment in missed_appointments %}
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>{{ appointment.task }}</td>
+                        <td>{{ appointment.date }}</td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

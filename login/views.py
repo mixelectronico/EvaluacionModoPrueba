@@ -10,7 +10,6 @@ from home.models import Appointment
 def login(request):
     return render(request, 'index.html')
 
-<<<<<<< HEAD
 def registrar(request):
     return render(request, 'index.html')
 
@@ -73,8 +72,6 @@ from .models import User
 def login(request):
     return render(request, 'index.html')
 
-=======
->>>>>>> 625fab434130952c70a5f7467cc9c2eecb96a260
 def registrar(request):
     return render(request, 'index.html')
 
