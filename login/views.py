@@ -135,3 +135,6 @@ def add_appointment(request):
     user = User.objects.filter(id=request.session['user_id'])
     Appointment.objects.create(task=task, date=date, status=status, user=user[0])
     return redirect('home/')
+
+def edit_appointment(request):
+    return render(request, 'edit_appointment.html')
